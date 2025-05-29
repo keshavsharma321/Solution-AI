@@ -111,8 +111,7 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-800">Our Location</h4>
                     <p className="text-gray-600 mt-1">
-                      123 Tech Boulevard, Innovation District<br />
-                      San Francisco, CA 94105
+                     Austell, GA 30168
                     </p>
                   </div>
                 </div>
@@ -126,8 +125,7 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-800">Email Us</h4>
                     <p className="text-gray-600 mt-1">
-                      contact@Solutionai.com<br />
-                      support@Solutionai.com
+                     contact@solutionai.us
                     </p>
                   </div>
                 </div>
@@ -141,8 +139,7 @@ const Contact: React.FC = () => {
                   <div className="ml-4">
                     <h4 className="text-lg font-semibold text-gray-800">Call Us</h4>
                     <p className="text-gray-600 mt-1">
-                      +1 (555) 123-4567<br />
-                      +1 (555) 987-6543
+                      +1 4706998973
                     </p>
                   </div>
                 </div>
