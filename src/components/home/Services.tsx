@@ -70,6 +70,7 @@ const Services: React.FC = () => {
 
   const handleServiceClick = (serviceId: string) => {
     navigate(`/services/${serviceId}`);
+    window.scrollTo({ top: 0, behavior: 'instant' });
   };
 
   return (

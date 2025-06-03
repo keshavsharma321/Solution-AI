@@ -70,6 +70,18 @@ const Navbar: React.FC = () => {
             >
               Management
             </Link>
+             <Link 
+              to="/contact" 
+              className="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-md font-medium transition-colors"
+            >
+              Book A Demo
+            </Link>
+            <Link 
+              to="/privacy" 
+              className="border-violet-600 border-2 text-violet-600 px-4 py-2 rounded-md font-medium transition-colors"
+            >
+              Privacy Policy
+            </Link>
             <Link 
               to="/contact" 
               className="bg-violet-600 hover:bg-violet-700 text-white px-4 py-2 rounded-md font-medium transition-colors"
