@@ -12,57 +12,64 @@ import {
 import AnimatedSection from '../components/common/AnimatedSection';
 import Button from '../components/common/Button';
 
+
+
 const services = {
-  jarvis: {
-    title: 'Jarvis',
-    icon: <Cpu className="h-12 w-12" />,
-    description:
-      'Jarvis is your AI-powered customer service assistant, revolutionizing the way businesses interact with customers through seamless automation and intelligent support.',
-    features: [
-      'Seamless integration with CRM and helpdesk platforms',
-      '24/7 automated support availability',
-      'Personalized assistance based on customer data',
-      'Multichannel support (chat, email, voice, social media)',
-      'Intelligent ticket categorization and routing',
-      'Natural Language Understanding and automated responses',
-      'Machine learning-powered continuous improvement'
-    ],
-    benefits: [
-      'Enhanced customer satisfaction and loyalty',
-      'Reduced response times and operational costs',
-      'Consistent multichannel customer experience',
-      'More efficient and scalable support operations',
-      'Proactive problem-solving capabilities',
-      'Real-time support without human intervention',
-      'Smarter and faster decision-making'
-    ]
-  },
- 'mariah-ai': {
-  title: 'Mariah AI',
-  icon: <Users className="h-12 w-12" />,
-  description: 'Affordable multi-modal AI chatbot for intelligent, 24/7 customer engagement across text, voice, and visual channels.',
+ jarvis: {
+  title: 'Jarvis',
+  icon: <Cpu className="h-12 w-12" />,
+  backgroundImage: '/jarvis.jpg', 
+  description:
+    'Jarvis is an advanced AI-powered customer service assistant designed to deliver instant, accurate, and personalized support across chat, email, and voice channels. It combines natural language understanding with intelligent automation to resolve issues, route complex queries, and improve continuously—all while reducing operational costs and enhancing customer satisfaction.',
   features: [
-    'Multi-modal communication (text, voice, image)',
-    'Omni-channel support across web, apps, and messaging platforms',
-    'Natural Language Processing, voice recognition, and image analysis',
-    'AI as a Service (AIaaS) with cloud-based deployment',
-    'Customizable chatbot personality, appearance, and responses',
-    'Conversational and behavioral analytics for business insights',
-    'Simple setup and CRM integration without technical expertise'
+    'Effortless integration with CRM and helpdesk systems to unify customer data and streamline workflows',
+    'Round-the-clock automated support for instant responses anytime, including outside business hours',
+    'Context-aware, personalized assistance tailored to each customer’s history and profile',
+    'Multichannel support across chat, email, voice, and social media for cohesive service delivery',
+    'Smart ticket categorization and routing based on urgency, topic, and agent expertise',
+    'Natural Language Understanding for interpreting customer intent, tone, and context accurately',
+    'Continuous performance improvement through machine learning based on past interactions'
   ],
   benefits: [
-    'Improved customer satisfaction through human-like interactions',
-    '24/7 automated support and sales engagement',
-    'Cost-effective solution tailored for small and medium businesses',
-    'Increased customer engagement and loyalty',
-    'Lead generation and conversion through proactive conversations',
-    'Scalable and flexible to grow with your business',
-    'Streamlined internal support and HR automation'
+    'Delivers enhanced customer satisfaction and loyalty by making customers feel heard and valued',
+    'Reduces average response times and lowers operational costs by automating repetitive tasks',
+    'Maintains consistent customer service tone and quality across all communication platforms',
+    'Proactively solves problems by detecting patterns and providing relevant fixes before escalation',
+    'Provides real-time support without requiring human intervention, improving response speed',
+    'Enables smarter and faster decisions through real-time insights and intelligent recommendations'
+  ]
+},
+'mariah-ai': {
+  title: 'Mariah AI',
+  icon: <Users className="h-12 w-12" />,
+    backgroundImage: '/mariah.jpg', 
+
+  description:
+    'Mariah AI is a powerful, always-on desktop intelligence designed to boost productivity, ensure privacy, and provide real-time intelligent support for writing, research, task management, and more—all with adaptive learning and natural interaction.',
+  features: [
+    'Human-like natural conversations with emotional and intent awareness',
+    'Runs locally on your desktop for maximum privacy and minimal latency',
+    'Smart document handling with summarization, insights, and clause extraction',
+    'Seamless integration with your calendar and email for scheduling and follow-ups',
+    'Mood-aware interactions that adapt tone based on emotional context',
+    'Hands-free productivity through conversational voice mode',
+    'Adaptive learning to personalize assistance based on habits and preferences'
+  ],
+  benefits: [
+    'Fully desktop-based operation for fast, distraction-free performance',
+    'Guaranteed privacy and security with local data control and no third-party training usage',
+    'Highly personalized experience with evolving intelligence that fits your workflows',
+    'Offline-capable for uninterrupted productivity even without internet',
+    'Elegant and minimal user interface that reduces cognitive load and boosts focus',
+    'Supports a wide range of use cases including students, professionals, and entrepreneurs',
+    'Empathetic and responsive AI assistant tailored for everyday tasks and creative collaboration'
   ]
 },
 'ai-hr': {
   title: 'AI HRMS',
   icon: <UserCheck className="h-12 w-12" />,
+    backgroundImage: '/iot.jpg', 
+
   description: 'Revolutionize your recruitment and onboarding with AI-powered HR automation.',
   features: [
     'Smart resume parsing and automated screening',
@@ -90,6 +97,8 @@ const services = {
 'vciso': {
   title: 'AI vCISO',
   icon: <ShieldCheck className="h-12 w-12" />,
+    backgroundImage: '/desktop.jpg', 
+
   description: 'AI-powered Virtual Chief Information Security Officer providing 24/7 cybersecurity strategy, compliance, and risk management.',
   features: [
     'AI-powered threat intelligence and real-time response',
@@ -115,6 +124,8 @@ const services = {
 'enterprise-ai': {
   title: 'Enterprise AI (Chris)',
   icon: <Building className="h-12 w-12" />,
+    backgroundImage: '/enterprise.jpg', 
+
   description: 'Secure AI assistant for executives and growing teams, offering scalable, enterprise-grade automation and insights.',
   features: [
     'Enterprise-level data encryption',
@@ -144,6 +155,7 @@ const services = {
   'desktop-ai': {
     title: 'Desktop AI',
     icon: <MonitorSmartphone className="h-12 w-12" />,
+      backgroundImage: '/other.jpg', 
     description: 'AI solutions designed for offline and on-device operations.',
     features: [
       'On-device NLP',
@@ -165,6 +177,7 @@ const services = {
   'other-ai-services': {
     title: 'Other AI Services',
     icon: <Brain className="h-12 w-12" />,
+    backgroundImage: '/other.jpg', 
     description: 'Additional AI services including consulting, custom models, and integration support.',
     features: [
       'AI readiness assessment',
@@ -206,19 +219,33 @@ const ServiceDetailPage: React.FC = () => {
   return (
     <div className="pt-20">
       <AnimatedSection>
-        <div className="bg-violet-900 text-white py-20">
-          <div className="container mx-auto px-4">
-            <div className="flex items-center justify-center mb-6">
-              <div className="w-20 h-20 rounded-full bg-white/10 flex items-center justify-center">
-                {service.icon}
-              </div>
-            </div>
-            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">{service.title}</h1>
-            <p className="text-violet-200 text-lg max-w-2xl mx-auto text-center">
-              {service.description}
-            </p>
+  {service.backgroundImage && (
+  <div
+    className="text-white py-20 bg-cover bg-center"
+    style={{ backgroundImage: `url('${service.backgroundImage}')` }}
+  >
+    <div className="">
+      <div className="container mx-auto px-4">
+
+        <div className="w-24 h-24 rounded-full mx-auto mb-6 bg-white/10 flex items-center justify-center relative">
+          <div className="bg-white/80 rounded-full p-2">
+            {service.icon}
           </div>
         </div>
+
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-center">
+          {service.title}
+        </h1>
+
+        <p className="text-violet-200 text-lg max-w-2xl font-semibold mx-auto text-center">
+          {service.description}
+        </p>
+
+      </div>
+    </div>
+  </div>
+)}
+
       </AnimatedSection>
 
       <div className="py-20">

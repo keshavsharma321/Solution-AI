@@ -6,6 +6,7 @@ import AnimatedSection from '../common/AnimatedSection';
 interface ServiceCardProps {
   id: string;
   title: string;
+  backgroundImage: string;
   description: string;
   icon: React.ReactNode;
   onClick: () => void;
@@ -29,44 +30,51 @@ const ServiceCard: React.FC<ServiceCardProps> = ({ title, description, icon, onC
 const Services: React.FC = () => {
   const navigate = useNavigate();
 
-  const services = [
-    {
-      id: 'jarvis',
-      title: 'Jarvis',
-      description: 'Enterprise-grade AI assistant for workflow automation and smart decision-making.',
-      icon: <Cpu className="h-8 w-8" />,
-    },
-    {
-      id: 'mariah-ai',
-      title: 'Mariah AI',
-      description: 'Conversational AI platform designed to engage, convert, and assist customers .',
-      icon: <Users className="h-8 w-8" />,
-    },
-    {
-      id: 'vciso',
-      title: 'IOT Solutions',
-      description: 'Virtual Chief Information Security Officer services for enterprise cybersecurity .',
-      icon: <ShieldCheck className="h-8 w-8" />,
-    },
-    {
-      id: 'enterprise-ai',
-      title: 'Enterprise AI',
-      description: 'Bespoke AI solutions tailored to large-scale enterprise needs and systems.',
-      icon: <Building className="h-8 w-8" />,
-    },
-    {
-      id: 'desktop-ai',
-      title: 'Desktop AI',
-      description: 'On-device AI applications designed for high-performance local processing.',
-      icon: <MonitorSmartphone className="h-8 w-8" />,
-    },
-    {
-      id: 'other-ai-services',
-      title: 'Other AI Services',
-      description: 'Explore our extended AI capabilities including consulting, integration, and custom builds.',
-      icon: <Brain className="h-8 w-8" />,
-    },
-  ];
+ const services = [
+  {
+    id: 'jarvis',
+    title: 'Jarvis',
+    description: 'Enterprise-grade AI assistant for workflow automation and smart decision-making.',
+    icon: <Cpu className="h-8 w-8" />,
+    backgroundImage: '/jarvis.jpg',
+  },
+  {
+    id: 'mariah-ai',
+    title: 'Mariah AI',
+    description: 'Conversational AI platform designed to engage, convert, and assist customers.',
+    icon: <Users className="h-8 w-8" />,
+    backgroundImage: '/mariah.jpg',
+  },
+  {
+    id: 'vciso',
+    title: 'IOT Solutions',
+    description: 'Virtual Chief Information Security Officer services for enterprise cybersecurity.',
+    icon: <ShieldCheck className="h-8 w-8" />,
+    backgroundImage: '/desktop.jpg',
+  },
+  {
+    id: 'enterprise-ai',
+    title: 'Enterprise AI',
+    description: 'Bespoke AI solutions tailored to large-scale enterprise needs and systems.',
+    icon: <Building className="h-8 w-8" />,
+    backgroundImage: '/enterprise.jpg',
+  },
+  {
+    id: 'desktop-ai',
+    title: 'Desktop AI',
+    description: 'On-device AI applications designed for high-performance local processing.',
+    icon: <MonitorSmartphone className="h-8 w-8" />,
+    backgroundImage: '/other.jpg',
+  },
+  {
+    id: 'other-ai-services',
+    title: 'Other AI Services',
+    description: 'Explore our extended AI capabilities including consulting, integration, and custom builds.',
+    icon: <Brain className="h-8 w-8" />,
+    backgroundImage: '/other.jpg',
+  },
+];
+
 
   const handleServiceClick = (serviceId: string) => {
     navigate(`/services/${serviceId}`);
@@ -97,6 +105,7 @@ const Services: React.FC = () => {
                 id={service.id}
                 title={service.title}
                 description={service.description}
+                backgroundImage={service.backgroundImage}
                 icon={service.icon}
                 onClick={() => handleServiceClick(service.id)}
               />
