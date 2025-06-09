@@ -43,6 +43,11 @@ const Hero: React.FC = () => {
                   Explore Solutions
                 </Button>
               </a>
+              <a href="/contact">
+                <Button variant="outline" className='bg-violet-700 text-white' size="lg">
+                  Book a Demo
+                </Button>
+              </a>
             </div>
           </div>
 

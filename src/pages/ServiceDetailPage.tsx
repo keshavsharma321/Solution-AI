@@ -42,27 +42,34 @@ const services = {
 'mariah-ai': {
   title: 'Mariah AI',
   icon: <Users className="h-12 w-12" />,
-    backgroundImage: '/mariah.jpg', 
+  backgroundImage: '/mariah.jpg',
 
   description:
-    'Mariah AI is a powerful, always-on desktop intelligence designed to boost productivity, ensure privacy, and provide real-time intelligent support for writing, research, task management, and more—all with adaptive learning and natural interaction.',
+    'Mariah AI is a powerful, always-on desktop intelligence designed to boost productivity, ensure privacy, and provide real-time intelligent support for writing, research, task management, and more—all with adaptive learning and natural interaction. Whether you’re drafting reports, planning your schedule, or researching complex topics, Mariah delivers fast, contextual support while keeping all your data securely on your device. ',
+
   features: [
-    'Human-like natural conversations with emotional and intent awareness',
-    'Runs locally on your desktop for maximum privacy and minimal latency',
-    'Smart document handling with summarization, insights, and clause extraction',
-    'Seamless integration with your calendar and email for scheduling and follow-ups',
-    'Mood-aware interactions that adapt tone based on emotional context',
-    'Hands-free productivity through conversational voice mode',
-    'Adaptive learning to personalize assistance based on habits and preferences'
+    'Engages in natural, human-like conversations that go beyond scripted responses, using emotional tone detection and intent understanding to hold meaningful, productive dialogues tailored to your needs.',
+    'Runs entirely on your desktop device, keeping your data safe within your control. Local execution ensures minimal latency, enhanced security, and zero reliance on third-party servers or cloud processing.',
+    'Offers powerful document handling capabilities including AI-powered summarization, clause extraction, key insight identification, and smart annotation to support research, legal, and academic workflows.',
+    'Integrates smoothly with your existing productivity tools like calendar apps, email clients, and to-do lists, enabling you to automate scheduling, track deadlines, and receive follow-up reminders effortlessly.',
+    'Responds to your emotional tone and adjusts its responses accordingly—whether you are in a rush, relaxed, or frustrated—resulting in a more natural and empathetic user experience.',
+    'Voice-first design allows you to use voice commands for nearly any task, from opening documents to searching the web, setting timers, drafting content, or summarizing meeting notes—perfect for hands-free productivity.',
+    'Learns from your daily habits, task patterns, and preferred workflows to personalize assistance over time. This adaptive learning ensures Mariah grows more efficient and accurate the more you use it.',
+    'Includes customizable workflows and triggers that let you define your own shortcuts and automation rules, whether it’s generating reports at the end of the day or sending a daily status email to your team.',
+    'Features an intelligent file explorer and document search system that understands context, allowing you to ask for “the presentation from last Monday” or “the latest report for Project Delta” and get accurate results instantly.'
   ],
+
   benefits: [
-    'Fully desktop-based operation for fast, distraction-free performance',
-    'Guaranteed privacy and security with local data control and no third-party training usage',
-    'Highly personalized experience with evolving intelligence that fits your workflows',
-    'Offline-capable for uninterrupted productivity even without internet',
-    'Elegant and minimal user interface that reduces cognitive load and boosts focus',
-    'Supports a wide range of use cases including students, professionals, and entrepreneurs',
-    'Empathetic and responsive AI assistant tailored for everyday tasks and creative collaboration'
+    'Delivers lightning-fast performance by operating natively on your desktop, reducing load times and ensuring that your experience is free from internet-based delays and lag.',
+    'Provides maximum data privacy, as none of your files, voice inputs, or typed commands are sent to external servers—ideal for professionals and businesses that handle sensitive information.',
+    'Adapts to your personal preferences and workflow over time, creating a unique, intelligent assistant experience that feels more like a collaborative partner than a tool.',
+    'Keeps functioning smoothly even without an internet connection, ensuring that you can write, research, and plan anytime—even in remote locations or during network outages.',
+    'Maintains an elegant, distraction-free user interface designed to help you focus on deep work. Its minimalist aesthetic removes clutter while presenting relevant information just when you need it.',
+    'Caters to a wide variety of users—students conducting research, professionals managing their workload, freelancers organizing creative content, and entrepreneurs planning their strategy.',
+    'Delivers emotionally intelligent support, helping users stay motivated, engaged, and focused through gentle nudges, encouraging feedback, and context-aware suggestions.',
+    'Reduces dependency on multiple apps by consolidating your daily tools into one centralized interface where voice, text, and automation coexist harmoniously.',
+    'Boosts cognitive flow and task continuity by helping you manage your work in a fluid, conversational manner rather than switching between rigid interfaces and isolated apps.',
+    'Continuously evolves to support new use cases and integrations, ensuring Mariah grows with your goals and adapts to emerging tech, apps, and work styles.'
   ]
 },
 'ai-hr': {
@@ -250,9 +257,9 @@ const ServiceDetailPage: React.FC = () => {
 
       <div className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+          <div className="grid  grid-cols-1 md:grid-cols-2 gap-12">
             <AnimatedSection>
-              <div className="bg-white rounded-xl shadow-lg p-8">
+              <div className="bg-white rounded-xl  shadow-lg p-8">
                 <h2 className="text-2xl font-bold mb-6 text-violet-900">Key Features</h2>
                 <ul className="space-y-4">
                   {service.features.map((feature, index) => (
